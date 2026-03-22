@@ -1,0 +1,7 @@
+node_modules
+dist
+out
+README.md
+.DS_Store
+.eslintcache
+*.log*
