@@ -7,6 +7,7 @@ type TicTacToeGameProps = {
   onMatchEnd: (outcome: MatchOutcome) => void
   onBackToMenu: () => void
   onQuit: () => void
+  appVersion: string
 }
 
 type GameMode = 'playing' | 'ended'
@@ -49,7 +50,12 @@ function pickComputerMove(board: CellValue[]): number | null {
   return availableMoves[randomIndex]
 }
 
-function TicTacToeGame({ onMatchEnd, onBackToMenu, onQuit }: TicTacToeGameProps): React.JSX.Element {
+function TicTacToeGame({
+  onMatchEnd,
+  onBackToMenu,
+  onQuit,
+  appVersion
+}: TicTacToeGameProps): React.JSX.Element {
   const [mode, setMode] = useState<GameMode>('playing')
   const [board, setBoard] = useState<CellValue[]>(Array(9).fill(null))
   const [winner, setWinner] = useState<Winner>(null)
@@ -117,6 +123,7 @@ function TicTacToeGame({ onMatchEnd, onBackToMenu, onQuit }: TicTacToeGameProps)
           <GameControls onReset={resetBoard} onBackToMenu={onBackToMenu} onQuit={onQuit} />
         )}
       </div>
+      <p className="version-indicator version-game">v{appVersion}</p>
     </section>
   )
 }

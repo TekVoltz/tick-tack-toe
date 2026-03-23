@@ -2,6 +2,7 @@ node_modules
 dist
 out
 README.md
+Player
 .DS_Store
 .eslintcache
 *.log*
