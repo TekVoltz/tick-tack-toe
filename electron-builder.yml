@@ -1,5 +1,9 @@
-appId: com.electron.app
+appId: com.ticktacktoe.app
 productName: tick-tack-toe
+publish:
+  provider: github
+  owner: TekVoltz
+  repo: tick-tack-toe
 directories:
   buildResources: build
 files:

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import MainMenu from './components/MainMenu'
 import StatusDashboard from './components/Dashboard/StatusDashboard'
 import EnemySprite from './components/Enemy/EnemySprite'
+import PlayerSprite from './components/Player/PlayerPortrait'
 import TicTacToeGame from './components/TicTacToe/TicTacToeGame'
 import type { MatchOutcome, MatchRecord } from './types/game'
 import { INITIAL_UPDATER_STATE, type UpdaterState } from './types/updater'
@@ -125,6 +126,7 @@ function App(): React.JSX.Element {
       <StatusDashboard playerHealth={playerHealth} matchHistory={matchHistory} />
 
       <aside className="side-panel-stack" aria-label="Character panels">
+        <PlayerSprite />
         <EnemySprite playerHealth={playerHealth} />
       </aside>
 
